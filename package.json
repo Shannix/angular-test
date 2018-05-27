@@ -10,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
@@ -24,6 +23,7 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "age-calculator": "^1.0.0",
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "path": "^0.12.7",
