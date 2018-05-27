@@ -3,12 +3,12 @@
   <nav id="sidebar">
     <div class="sidebar-header">
       <picture>
-        <source srcset="assets/picture/profile.jpg" type="image/svg+xml">
-        <img src="assets/picture/profile.jpg" class="img-fluid img-thumbnail" alt="...">
+        <source srcset="assets/picture/{{picture}}" type="image/svg+xml">
+        <img src="assets/picture/{{picture}}" class="img-fluid img-thumbnail" alt="...">
       </picture>
-      <h3 class="text-center"> Amine DERRADJI </h3>
-      <h5 class="text-center"> 25 ans </h5>
-      <h5 class="text-center"> Développeur full-stack </h5>
+      <h3 class="text-center"> {{firstName}} {{name}} </h3>
+      <h5 class="text-center"> {{ age }} ans </h5>
+      <h5 class="text-center"> {{job}} </h5>
       <strong>AD</strong>
     </div>
 
@@ -41,9 +41,9 @@
 
     <div class="row">
       <div class="col-sm-4">
-        <address><i class="fas fa-map-marker"></i> 28 Rue des rancy <br> 69003, Lyon <br>
-          <i class="fas fa-at"></i> derradji2993@gmail.com <br>
-          <i class="fas fa-mobile"></i> 07 69 17 11 50</address>
+        <address><i class="fas fa-map-marker"></i> {{adresse}} <br> {{completeAdresse}} <br>
+          <i class="fas fa-at"></i> {{email}} <br>
+          <i class="fas fa-mobile"></i> {{phoneNumber}}</address>
       </div>
       <div class="col-sm-8">
         <h4 class="text-uppercase" id="Objectif"> Objectif </h4>
@@ -85,6 +85,9 @@
       <div class="col-sm-4">
         <h4 class="text-uppercase"> <i class="fas fa-language fa-lg"></i> Langues </h4>
 
+        <ul class="list-unstyled">
+          <li *ngFor="let lg of languages">{{lg}} </li>
+        </ul>
       </div>
     </div>
 
@@ -94,7 +97,7 @@
       <div class="col-sm-12">
         <h5 id="bonus"> Ce que peu de gens savent sur moi  </h5>
         <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <p class="mb-0">{{citation}}</p>
           <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
         </blockquote>
       </div>
@@ -111,7 +114,7 @@
         <i class="fab fa-instagram fa-2x"></i>
         <i class="fab fa-git-square fa-2x"></i>
       </p>
-      Copyright (c) 2018 Shannix All Rights Reserved. (v0.2)
+      Copyright (c) {{year}} {{owner}} All Rights Reserved. {{version}}
     </footer>
   </div>
 </div>
