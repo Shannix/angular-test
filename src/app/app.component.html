@@ -55,6 +55,9 @@
     <div class="row">
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="experience"> <i class="fas fa-book fa-lg"></i> Expérience </h4>
+        <ul class="list-unstyled">
+          <li *ngFor="let experience of experiences">{{experience}} </li>
+        </ul>
       </div>
     </div>
 
@@ -63,6 +66,9 @@
     <div class="row">
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="formation"> <i class="fas fa-graduation-cap fa-lg"></i> Formation </h4>
+        <ul class="list-unstyled">
+          <li *ngFor="let educ of education">{{educ}} </li>
+        </ul>
       </div>
     </div>
 
@@ -71,7 +77,9 @@
     <div class="row">
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="competences"> <i class="fas fa-certificate fa-lg"></i> Compétences  </h4>
-
+        <ul class="list-unstyled">
+          <li *ngFor="let skill of skills">{{skill}} </li>
+        </ul>
       </div>
     </div>
 
@@ -80,7 +88,9 @@
     <div class="row">
       <div class="col-sm-8">
         <h4 class="text-uppercase" id="centresInteret">  <i class="fab fa-gratipay fa-lg"></i> Centres d’intérêt </h4>
-
+        <ul class="list-unstyled">
+          <li *ngFor="let hobbie of hobbies">{{hobbie}} </li>
+        </ul>
       </div>
       <div class="col-sm-4">
         <h4 class="text-uppercase"> <i class="fas fa-language fa-lg"></i> Langues </h4>
@@ -107,12 +117,12 @@
 
     <footer>
       <p class="text-center">
-        <i class="fab fa-facebook fa-2x"></i>
-        <i class="fab fa-twitter-square fa-2x"></i>
-        <i class="fab fa-google-plus-square fa-2x"></i>
-        <i class="fab fa-linkedin fa-2x"></i>
-        <i class="fab fa-instagram fa-2x"></i>
-        <i class="fab fa-git-square fa-2x"></i>
+        <a href="{{LINKDIN}}" *ngIf="LINKDIN != '#'">  <i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="{{GIT}}" *ngIf="GIT != '#'">  <i class="fab fa-git-square fa-2x"></i></a>
+        <a href="{{FB}}" *ngIf="FB != '#'">  <i class="fab fa-facebook fa-2x"></i> </a>
+        <a href="{{TWITTER}}" *ngIf="TWITTER != '#'">  <i class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="{{INSTA}}" *ngIf="INSTA != '#'">  <i class="fab fa-instagram fa-2x"></i></a>
+        <a href="{{GOOGLEPLUS}}" *ngIf="GOOGLEPLUS != '#'">  <i class="fab fa-google-plus-square fa-2x"></i></a>
       </p>
       Copyright (c) {{year}} {{owner}} All Rights Reserved. {{version}}
     </footer>

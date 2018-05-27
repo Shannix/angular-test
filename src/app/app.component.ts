@@ -20,8 +20,21 @@ export class AppComponent {
   citation = "...";
   picture = "profile.jpg";
   job = "Développeur full-stack";
+  experiences = ["Stage [CAPGEMINI] "];
+  education = ["MASTER 2 [ Génie informatique ] Université Grenoble Alpes"];
+  skills = ["Java JEE", "Symfony", "JS", "HTML", "CSS", "Bootstrap"];
+  hobbies = ["Natation", "Photographie", "VTT", "Escalade"];
   languages = ["Anglais [ Compétence professionnelle ]",
     "Français [ Bilingue ou langue natale ]"];
+
+  //---------------------------SOCIAL-------------------------------------------------------------
+
+  FB = "#";
+  LINKDIN = "https://www.linkedin.com/in/amine-derradji-a4b8b7133/";
+  INSTA = "#";
+  GIT = "https:/github.com/Shannix";
+  TWITTER = "#";
+  GOOGLEPLUS = "#";
 
   //---------------------------FOOTER-------------------------------------------------------------
   year = (new Date()).getFullYear();
