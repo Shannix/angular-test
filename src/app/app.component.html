@@ -1,20 +1,117 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <picture>
+        <source srcset="assets/picture/profile.jpg" type="image/svg+xml">
+        <img src="assets/picture/profile.jpg" class="img-fluid img-thumbnail" alt="...">
+      </picture>
+      <h3 class="text-center"> Amine DERRADJI </h3>
+      <h5 class="text-center"> 25 ans </h5>
+      <h5 class="text-center"> Développeur full-stack </h5>
+      <strong>AD</strong>
+    </div>
 
+    <ul class="list-unstyled components">
+      <li class="active">
+        <a href="#"> <i class="fas fa-book"></i> Expérience </a>
+      </li>
+      <li class="active">
+        <a href="#"> <i class="fas fa-graduation-cap"></i> Formation </a>
+      </li>
+      <li class="active">
+        <a href="#"> <i class="fas fa-shoe-prints"></i> Compétences </a>
+      </li>
+      <li class="active">
+        <a href="#centresInteret">  Centres d’intérêt </a>
+      </li>
+      <li class="active">
+        <a href="#"> <i class="fas fa-star"></i> Bonus </a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <div id="content" class="container-fluid">
+
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn pull-left"> <i class="fas fa-align-justify"></i> </button>
+
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <address><i class="fas fa-map-marker"></i> 28 Rue des rancy <br> 69003, Lyon <br>
+          <i class="fas fa-at"></i> derradji2993@gmail.com <br>
+          <i class="fas fa-mobile"></i> 07 69 17 11 50</address>
+      </div>
+      <div class="col-sm-8">
+        <h4 class="text-uppercase" id="Objectif"> Objectif </h4>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="text-uppercase" id="experience"> <i class="fas fa-book fa-lg"></i> Expérience </h4>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="text-uppercase" id="formation"> <i class="fas fa-graduation-cap fa-lg"></i> Formation </h4>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="text-uppercase" id="competences"> <i class="fas fa-shoe-prints fa-lg"></i> Compétences  </h4>
+
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <h4 class="text-uppercase" id="centresInteret">  Centres d’intérêt </h4>
+
+      </div>
+      <div class="col-sm-4">
+        <h4 class="text-uppercase"> Langues </h4>
+
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h5 id="bonus"> Ce que peu de gens savent sur moi  </h5>
+        <blockquote class="blockquote">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <footer>
+      <p class="text-center">
+        <i class="fab fa-facebook fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+        <i class="fab fa-google-plus-square fa-2x"></i>
+        <i class="fab fa-linkedin fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+        <i class="fab fa-git-square fa-2x"></i>
+      </p>
+      Copyright (c) 2018 Shannix All Rights Reserved. (v0.2)
+    </footer>
+  </div>
+</div>
