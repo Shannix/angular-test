@@ -46,7 +46,9 @@
         <p *ngIf="permisB"> <i class="fas fa-check-square" style="color:green;"></i> Permis B </p>
       </div>
       <div class="col-sm-8">
-        <h4 class="text-uppercase" id="Objectif"> Objectif </h4>
+        <p class="desc-pf"> {{whoiam}} </p>
+        <h5 class="text-uppercase" id="Objectif"> Objectif : </h5>
+        <p> {{goal}} </p>
       </div>
     </div>
 
@@ -63,20 +65,13 @@
 
     <div class="line"></div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="text-uppercase" id="formation"> <i class="fas fa-graduation-cap fa-lg"></i> Formation </h4>
-        <ul class="list-unstyled">
-          <li *ngFor="let educ of education">{{educ}} </li>
-        </ul>
-      </div>
-    </div>
+
 
     <div class="row">
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="formation"> <i class="fas fa-graduation-cap fa-lg"></i> Formation </h4>
         <ul class="list-unstyled">
-          <li *ngFor="let educ of education2">{{educ.title}} </li>
+          <li *ngFor="let educ of education"><b>  [ {{educ.from}} - {{educ.to}} ] </b> : {{educ.title}} <b *ngIf="educ.school != ''"> —  {{educ.school}} </b>.</li>
         </ul>
       </div>
     </div>
@@ -106,7 +101,7 @@
         <h4 class="text-uppercase"> <i class="fas fa-language fa-lg"></i> Langues </h4>
 
         <ul class="list-unstyled">
-          <li *ngFor="let lg of languages">{{lg}} </li>
+          <li *ngFor="let lg of languages">{{lg.title}} </li>
         </ul>
       </div>
     </div>
