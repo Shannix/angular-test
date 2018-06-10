@@ -33,17 +33,43 @@ export class AppComponent {
     { id: 4, title: "baccalauréat S", from: "2012", to: "2013", school: "" }
   ];
 
+
+
   skills = ["Java JEE", "Symfony", "JS", "HTML", "CSS", "Bootstrap"];
 
   hobbies = ["Natation", "Photographie", "VTT", "Escalade"];
 
-  languages = ["Anglais [ Compétence professionnelle ]",
-    "Français [ Bilingue ou langue natale ]"];
 
   languages: languageObject[] = [
     { id: 1, title: "Anglais", level: "80", read: true, write: true, speak: true },
     { id: 2, title: "Français", level: "100", read: true, write: true, speak: true },
   ];
+
+  myLevel(x: languageObject): string {
+
+    if (x.level == "100")
+      return "[Langue maternelle]"
+
+    let etat = "";
+    let desc = "";
+    let start = false;
+
+    if (x.level < 40) etat = "Débutant";
+    if (x.level < 60 && x.level > 40) etat = "Intermédiaire";
+    if (x.level < 100 && x.level > 60) etat = "Avancé";
+
+
+    if (x.read == true) if (start) desc += ", Lu"; else { desc += "[Lu"; start = true; }
+    if (x.write == true) if (start) desc += ", Écrit"; else { desc += "[Écrit"; start = true; }
+    if (x.speak == true) if (start) desc += ", Parlé"; else { desc += "[Parlé"; start = true; }
+    desc += "]";
+
+    if (x.read == false && x.write == false && x.speak == false) desc = "";
+
+
+    return etat + " " + desc;
+  }
+
 
   //---------------------------SOCIAL-------------------------------------------------------------
 
@@ -60,7 +86,11 @@ export class AppComponent {
   owner = "Shannix";
   //----------------------------------------------------------------------------------------------
 
+
+
 }
+
+
 
 export interface educationObject {
 

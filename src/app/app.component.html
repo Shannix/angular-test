@@ -101,7 +101,7 @@
         <h4 class="text-uppercase"> <i class="fas fa-language fa-lg"></i> Langues </h4>
 
         <ul class="list-unstyled">
-          <li *ngFor="let lg of languages">{{lg.title}} </li>
+          <li *ngFor="let lg of languages"><b> {{lg.title}} </b> : {{myLevel(lg)}}</li>
         </ul>
       </div>
     </div>
