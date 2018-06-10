@@ -41,13 +41,13 @@ export class AppComponent {
 
 
   languages: languageObject[] = [
-    { id: 1, title: "Anglais", level: "80", read: true, write: true, speak: true },
-    { id: 2, title: "Français", level: "100", read: true, write: true, speak: true },
+    { id: 1, title: "Anglais", level: 80, read: true, write: true, speak: true },
+    { id: 2, title: "Français", level: 100, read: true, write: true, speak: true },
   ];
 
   myLevel(x: languageObject): string {
 
-    if (x.level == "100")
+    if (x.level == 100)
       return "[Langue maternelle]"
 
     let etat = "";
@@ -59,15 +59,14 @@ export class AppComponent {
     if (x.level < 100 && x.level > 60) etat = "Avancé";
 
 
-    if (x.read == true) if (start) desc += ", Lu"; else { desc += "[Lu"; start = true; }
-    if (x.write == true) if (start) desc += ", Écrit"; else { desc += "[Écrit"; start = true; }
-    if (x.speak == true) if (start) desc += ", Parlé"; else { desc += "[Parlé"; start = true; }
+    if (x.read) if (start) desc += ", Lu"; else { desc += " [Lu"; start = true; }
+    if (x.write) if (start) desc += ", Écrit"; else { desc += " [Écrit"; start = true; }
+    if (x.speak) if (start) desc += ", Parlé"; else { desc += " [Parlé"; start = true; }
     desc += "]";
 
     if (x.read == false && x.write == false && x.speak == false) desc = "";
 
-
-    return etat + " " + desc;
+    return etat + desc;
   }
 
 
@@ -107,7 +106,7 @@ export interface languageObject {
 
   id: number;
   title: string;
-  level: string;
+  level: number;
   read: boolean;
   write: boolean;
   speak: boolean;
