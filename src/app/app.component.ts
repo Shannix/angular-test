@@ -24,6 +24,7 @@ export class AppComponent {
   job = "Développeur full-stack";
   experiences = ["Stage [CAPGEMINI] "];
   education = ["MASTER 2 [ Génie informatique ] Université Grenoble Alpes"];
+  education2: educationObject[] = [{ id: 1, title: "test", year: "2010" }];
   skills = ["Java JEE", "Symfony", "JS", "HTML", "CSS", "Bootstrap"];
   hobbies = ["Natation", "Photographie", "VTT", "Escalade"];
   languages = ["Anglais [ Compétence professionnelle ]",
@@ -45,6 +46,12 @@ export class AppComponent {
   owner = "Shannix";
   //----------------------------------------------------------------------------------------------
 
+}
 
+export interface educationObject {
+
+  id: number;
+  title: string;
+  year: string;
 
 }

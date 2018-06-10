@@ -34,7 +34,6 @@
 
   <div id="content" class="container-fluid">
 
-    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn pull-left"> <i class="fas fa-align-justify"></i> </button>
 
 
     <div class="line"></div>
@@ -72,6 +71,16 @@
         </ul>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="text-uppercase" id="formation"> <i class="fas fa-graduation-cap fa-lg"></i> Formation </h4>
+        <ul class="list-unstyled">
+          <li *ngFor="let educ of education2">{{educ.title}} </li>
+        </ul>
+      </div>
+    </div>
+
 
     <div class="line"></div>
 
