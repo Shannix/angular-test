@@ -28,12 +28,9 @@ export class AppComponent {
 
   experiences: experienceObject[] = [
     { id: 1, title: "Stage à [CAPGEMINI]", desc: " Développeur full stack  - intervention sur Cegema-Swisslife et developpement du Responsive mobile/tablette sur SAP Hybris B2B - Spontis ", from: "04-2018", to: "09-2018", locality: "Région de Lyon", technique: "#Liferay #Jhipster #Spring #Java #JSTL #Bootstrap #Salesforce #SQL #JS #JQUERY #CSS #MAVEN #ANT #JIRA #Gitlab" },
-    { id: 2, title: "DOCTORS YOU CAN SPEAK ENGLISH", desc: " Développeur full stack  -  Plateforme web spécialisé dans l’apprentissage de l’anglais médicale destiné aux médecins, dentistes, vétérinaires. ", from: "01-2017", to: "01-2018", locality: "", technique: "#Php Laravel #Angular #JS #Bootstrap #MySql" },
-    { id: 3, title: "Projet E-commerce - déménagement entre particuliers ", desc: " Développeur full stack  -  Plateforme web pour la vente et l’échange entre particuliers lors d’un déménagement.  ", from: "10-2017", to: "01-2018", locality: "", technique: "#Angular #JEE #Ejb3 #Hibernate #MySql" }
-    { id: 4, title: "Projet Jeu Colonne de trois  ", desc: " Conception & développement d’une IA capable de jouer une partie du jeu de colonne de trois et de gagner contre une autre IA. ", from: "05-2017", to: "02-2017", locality: "", technique: "#Prolog #Java #C" }
-
-
-
+    { id: 2, title: "DOCTORS YOU CAN SPEAK ENGLISH", desc: " Développeur full stack  -  Plateforme web spécialisé dans l’apprentissage de l’anglais médicale destiné aux médecins, dentistes, vétérinaires. ", from: "01-2017", to: "01-2018", locality: "-", technique: "#Php Laravel #Angular #JS #Bootstrap #MySql" },
+    { id: 3, title: "Projet E-commerce - déménagement entre particuliers ", desc: " Développeur full stack  -  Plateforme web pour la vente et l’échange entre particuliers lors d’un déménagement.  ", from: "10-2017", to: "01-2018", locality: "-", technique: "#Angular #JEE #Ejb3 #Hibernate #MySql" },
+    { id: 4, title: "Projet Jeu Colonne de trois  ", desc: " Conception & développement d’une IA capable de jouer une partie du jeu de colonne de trois et de gagner contre une autre IA. ", from: "05-2017", to: "02-2017", locality: "-", technique: "#Prolog #Java #C" }
 
   ];
 
@@ -54,7 +51,7 @@ export class AppComponent {
 
 
 
-  skills = ["Java J2EE / JSTL", "Liferay", "EJB3", "C/C#/C++", "PHP Symfony", "PHP Laravel", "Ionic", "Angular", "JS", "CSS", "JQUERY," "Bootstrap", "Hibernate", "Mysql", "Firebase", "oracle", "JIRA", "github/lab",];
+  skills = ["Java J2EE / JSTL", "Liferay", "EJB3", "C/C#/C++", "PHP Symfony", "PHP Laravel", "Ionic", "Angular", "JS", "CSS", "JQUERY,", "Bootstrap", "Hibernate", "Mysql", "Firebase", "oracle", "JIRA", "github/lab"];
 
 
   hobbies = ["Natation", "Escalade", "Basket", "Photographie", "Littérature"];
@@ -137,7 +134,7 @@ export interface experienceObject {
 
   id: number;
   title: string;
-  description: string;
+  desc: string;
   from: string;
   to: string;
   locality: string;
