@@ -58,7 +58,11 @@
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="experience"> <i class="fas fa-book fa-lg"></i> Expérience </h4>
         <ul class="list-unstyled">
-          <li *ngFor="let experience of experiences">{{experience}} </li>
+          <li *ngFor="let experience of experiences" style="margin:1%;">
+            <b>[{{experience.from}} - {{experience.to}}]:</b> {{experience.title}} <br>
+            <span> <b>Description: </b>{{experience.desc}}. </span><br>
+            <span> <b>Technique:</b> {{experience.technique}} </span><br>
+          </li>
         </ul>
       </div>
     </div>
@@ -82,9 +86,14 @@
     <div class="row">
       <div class="col-sm-12">
         <h4 class="text-uppercase" id="competences"> <i class="fas fa-certificate fa-lg"></i> Compétences  </h4>
-        <ul class="list-unstyled">
-          <li *ngFor="let skill of skills">{{skill}} </li>
-        </ul>
+        <br>
+        <div class="row">
+          <div class="card col-sm-2" *ngFor="let skill of skills">
+            <div class="card-body">
+              <h5 class="card-title text-center text-uppercase">{{skill}}</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -113,7 +122,7 @@
         <h5 id="bonus"> Ce que peu de gens savent sur moi  </h5>
         <blockquote class="blockquote">
           <p class="mb-0">{{citation}}</p>
-          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <footer class="blockquote-footer"> <cite title="Source Title">A.</cite></footer>
         </blockquote>
       </div>
     </div>
